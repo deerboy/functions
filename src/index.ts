@@ -1,5 +1,11 @@
 import * as functions from "firebase-functions";
 
+import Stripe from "stripe";
+
+const stripe = new Stripe(functions.config().stripe.key, {
+  apiVersion: "2020-08-27",
+});
+
 // // Start writing Firebase Functions
 // // https://firebase.google.com/docs/functions/typescript
 //
